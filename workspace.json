@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
-    "entities": "libs/entities"
+    "entities": "libs/entities",
+    "ms-user": "apps/ms-user"
   }
 }
