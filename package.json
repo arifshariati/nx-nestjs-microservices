@@ -10,8 +10,11 @@
   "private": true,
   "dependencies": {
     "@nestjs/common": "^8.0.0",
+    "@nestjs/config": "^1.1.5",
     "@nestjs/core": "^8.0.0",
     "@nestjs/graphql": "^9.1.2",
+    "@nestjs/mapped-types": "*",
+    "@nestjs/microservices": "^8.2.3",
     "@nestjs/platform-express": "^8.0.0",
     "@nestjs/typeorm": "^8.0.2",
     "amqp-connection-manager": "^3.7.0",
