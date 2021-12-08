@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppService } from './app.service';
-import { User } from '@nx-nestjs-microservices/entities';
 import { ConfigModule } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
+import { AppService } from './app.service';
+
+import { Post } from '@nx-nestjs-microservices/entities';
 
 @Module({
   imports: [
@@ -19,7 +20,7 @@ import { AppController } from './app.controller';
       synchronize: true,
       autoLoadEntities: true,
     }),
-    TypeOrmModule.forFeature([User]),
+    TypeOrmModule.forFeature([Post]),
     AppModule
   ],
   controllers: [AppController],

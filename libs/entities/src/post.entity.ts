@@ -19,14 +19,6 @@ class Post {
 
     @Column()
     @Field()
-    userId: string;
-
-    @ManyToOne(() => User, user => user.posts)
-    @Field(() => User)
-    user: User;
-
-    @Column()
-    @Field()
     createdAt: Date;
 
     @Column({ nullable: true })

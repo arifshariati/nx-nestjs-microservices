@@ -25,10 +25,6 @@ class User {
     @Field()
     password: string;
 
-    @OneToMany(() => Post, post => post.user)
-    @Field(() => [Post], { nullable: true })
-    posts?: Post[];
-
     @Column()
     @Field()
     createdAt: Date;

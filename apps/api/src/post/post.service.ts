@@ -1,6 +1,8 @@
 import { Inject } from "@nestjs/common";
 import { ClientProxy } from "@nestjs/microservices";
+import { CreatePostInput } from "@nx-nestjs-microservices/dto";
 import { Post } from "@nx-nestjs-microservices/entities";
+import { Observable } from "rxjs";
 
 export class PostService {
 
@@ -8,8 +10,12 @@ export class PostService {
         @Inject('POST_SERVICE') private readonly postClient: ClientProxy,
     ) { }
 
-    async posts(): Promise<Post[]> {
-        return await this.postClient.send('getAllPosts',{}).toPromise();
+    createPost(createPostInput: CreatePostInput): Observable<Post> {
+        return this.postClient.send('createPost', createPostInput);
     }
-    
+
+    posts(): Observable<Post[]> {
+        return this.postClient.send('getAllPosts', {});
+    }
+
 }

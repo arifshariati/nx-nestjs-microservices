@@ -5,7 +5,7 @@ import { UserService } from './user.service';
 
 
 @Module({
-  imports:[
+  imports: [
     ClientsModule.register([
       {
         name: 'USER_SERVICE',
@@ -22,4 +22,4 @@ import { UserService } from './user.service';
   controllers: [],
   providers: [UserResolver, UserService],
 })
-export class UserModule {}
+export class UserModule { }

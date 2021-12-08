@@ -5,7 +5,7 @@ import { PostService } from './post.service';
 
 
 @Module({
-  imports:[
+  imports: [
     ClientsModule.register([
       {
         name: 'POST_SERVICE',
@@ -20,6 +20,6 @@ import { PostService } from './post.service';
       }]),
   ],
   controllers: [],
-  providers: [PostResolver,PostService],
+  providers: [PostResolver, PostService],
 })
-export class PostModule {}
+export class PostModule { }

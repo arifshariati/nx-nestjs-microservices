@@ -2,7 +2,9 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "dto": "libs/dto",
     "entities": "libs/entities",
+    "ms-post": "apps/ms-post",
     "ms-user": "apps/ms-user"
   }
 }

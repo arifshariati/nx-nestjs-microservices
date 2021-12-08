@@ -8,7 +8,7 @@ import { UserModule } from '../user/user.module';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
-    GraphQLModule.forRoot({ autoSchemaFile: join(process.cwd(),'graphql/api/schema.gql')}),
+    GraphQLModule.forRoot({ autoSchemaFile: join(process.cwd(), 'graphql/api/schema.gql') }),
     UserModule,
     PostModule
   ],

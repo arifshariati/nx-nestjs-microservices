@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-nestjs-microservices/dto": ["libs/dto/src/index.ts"],
       "@nx-nestjs-microservices/entities": ["libs/entities/src/index.ts"]
     }
   },
